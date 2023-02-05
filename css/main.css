@@ -1,0 +1,116 @@
+body {
+	font-family: Georgia, 'Times New Roman', Times, serif;
+	background-color: hsl(40, 50%, 60%);
+	margin: 0 4em 0 4em;
+}
+
+.wrapper {
+	background-color: hsl(40, 100%, 85%);
+	padding: 2em;
+	padding-top: 0.5em;
+}
+
+h1 {
+	font-weight: lighter;
+	font-style: italic;
+	text-align: center;
+}
+
+h2 {
+	font-weight: lighter;
+	font-style: italic;
+	text-align: center;
+}
+
+.about {
+	display: grid;
+	grid-template-areas:
+		"image about";
+	padding: 0.5em 0em 0.5em 0em;
+}
+
+#brad {
+	width: 100%;
+	max-width: 15em;
+	min-width: 10em;
+	grid-area: image;
+
+}
+
+.about-text {
+	grid-area: about;
+	padding-left: 2em;
+	font-size: 1.2rem;
+	line-height: 1.7rem;
+}
+
+.movies-awards {
+	display: grid;
+	grid-template-areas:
+		"movies awards";
+}
+
+.movies {
+	grid-area: movies;
+}
+
+.awards {
+	grid-area: awards;
+}
+
+.winner {
+	color: hsl(40, 100%, 35%);
+	font-weight: bold;
+}
+
+.nominee {
+	color: hsl(0, 0%, 50%);
+	font-weight: bold;
+}
+
+.movie-title {
+	font-style: italic;
+}
+
+footer {
+	text-align: center;
+}
+
+hr {
+	border: 1px solid hsl(40, 50%, 60%);
+}
+
+@media (max-width: 810px) {
+	body {
+		margin: 0 2em 0 2em;
+	}
+
+	.wrapper {
+		background-color: hsl(40, 100%, 85%);
+		padding: .5em;
+		padding-top: 0.5em;
+	}
+
+	.about {
+		grid-template-areas:
+			"image"
+			"about";
+		place-items: center;
+		padding: 1em;
+	}
+
+	.movies-awards {
+		grid-template-areas:
+			"movies"
+			"awards";
+		place-items: left;
+		padding: 1em;
+	}
+
+	#brad {
+		width: 100%;
+		max-width: 15em;
+		min-width: 10em;
+		grid-area: image;
+	}
+}
